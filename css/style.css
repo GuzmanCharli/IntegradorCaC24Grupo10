@@ -10,8 +10,8 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    margin: 20px;
-    border-radius: 20px;
+    margin: 2px;
+    border-radius: 10px;
 }
 
 .navbar-menu {
@@ -44,17 +44,21 @@ body{
 @media screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
         padding: 10px;
     }
 
     .navbar img {
-        margin-right: 0;
         margin-bottom: 10px;
+        margin-left: 15px;
     }
 
     .navbar a {
         padding: 10px;
+    }
+
+    .navbar-menu{
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -62,7 +66,7 @@ body{
   
 @keyframes display {
     0% {
-      transform: translateX(200px);
+      transform: translateX(100px);
       opacity: 0;
     }
     10% {
@@ -74,29 +78,35 @@ body{
       opacity: 1;
     }
     30% {
-      transform: translateX(-200px);
+      transform: translateX(-100px);
       opacity: 0;
     }
     100% {
-      transform: translateX(-200px);
+      transform: translateX(-100px);
       opacity: 0;
     }
 }
   
 .pic-ctn {
+    display: flex;
     position: relative;
     height: 300px;
-    background-color: brown;
-    border: 10px white solid;
-    border-top: 0px;
+    margin: 2px;
+    border-radius: 10px;
 }
   
 .pic-ctn > img {
     position: absolute;
-    top: 0;
-    left: calc(50% - 100px);
+    top: 0px;
     opacity: 0;
+    width: 80%;
+    left: 10%;
     animation: display 25s infinite;
+    border-radius: 10px;
+}
+
+.pic{
+    height: 300px;
 }
   
 img:nth-child(2) {
@@ -120,12 +130,12 @@ footer {
     color:aliceblue;
     align-items: center;  
     overflow: hidden;  
-    width: calc(100% - 40px);
+    width: calc(100% - 4px);
     position: fixed;
     bottom: 0;    
-    margin: 20px;
-    margin-bottom: 40px;
-    border-radius: 20px;
+    margin: 2px;
+    border-radius: 10px;
+    z-index: -1;
 }
 
 .footer-container {
