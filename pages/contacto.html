@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-   
+    <header>
         <div class="navbar">            
-                <img src="/images/logo1.jpg" alt="Logo">
+            <img src="/images/logo1.jpg" alt="Logo">
             <div class="navbar-menu">
                 <a href="/index.html">INICIO</a>
                 <a href="/pages/hombre.html">HOMBRE</a>
@@ -18,9 +18,84 @@
                 <a href="/pages/carrito.html">CARRITO</a>
             </div>
         </div>
-    
+    </header>
+
+    <div class="formulario">
+        <h1>Formulario de contacto</h1>
+        <form action="" method="">
+            <fieldset class="info-form-contacto">
+                <legend>INFORMACIÓN DE CONTACTO</legend>
+                <label for="nombre">*Nombre/s:
+                    <input type="text" name="nombre" id="nombre" size="20" maxlength="30" required placeholder="Nombre...">
+                </label>
+                <label for="nombre">*Apellido/s:
+                    <input type="text" name="apellido" id="apellido" size="20" maxlength="30" required placeholder="Apellido...">
+                </label>
+                <br><br>
+                <label for="telefono">*Telefono:
+                    <input type="number" name="telefono" id="telefono" min="1100000000" maxlength="15" required placeholder="Ej: 1122334455">
+                </label>
+                <label for="correo">*Correo electrónico:
+                    <input type="email" name="correo" id="correo" required>
+                </label>
+                <br><br>
+                <label for="provincia">*Provincia:
+                    <input type="text" name="provincia" id="provincia" required>
+                </label>
+                <label for="ciudad">*Ciudad:
+                    <input type="text" name="ciudad" id="ciudad" required>
+                </label>
+                <label for="CPostal">*Código postal:
+                    <input type="number" name="CPostal" id="CPostal" required placeholder="Ej: 1122">
+                </label>
+            </fieldset>
+
+            <fieldset class="info-form-compra">
+                <legend>INFORMACIÓN DE LA COMPRA (no obligatorio)</legend>
+                <label for="producto">Producto:
+                    <select name="producto" id="producto">
+                        <option value="Ropa">Ropa</option>
+                        <option value="Calzado">Calzado</option>
+                        <option value="Accesosio">Accesorio</option>
+                    </select>
+                </label>
+                <br><br>
+                <label for="nrocompra">Número de compra:
+                    <input type="number" name="nrocompra" id="nrocompra" min="1">
+                </label>
+                <br><br>
+                <label for="fecha">Fecha de la compra realizada:
+                    <input type="date" name="fecha" id="fecha">
+                </label>
+                <br><br>
+                <fieldset>
+                    <legend>Motivo de contacto</legend>
+                    <label for="motivo">
+                        <input type="checkbox" name="motivo" id="motivo" value="1"> Arrepentimiento
+                        <input type="checkbox" name="motivo" id="motivo" value="2"> Reembolso
+                        <input type="checkbox" name="motivo" id="motivo" value="3"> Producto erróneo
+                        <input type="checkbox" name="motivo" id="motivo" value="4"> Otro
+                    </label>
+                </fieldset>
+                <br><br>
+                <label for="adjunto">Adjuntar foto del producto
+                    <input type="file" name="adjunto" id="adjunto">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>INFORMACIÓN ADICIONAL</legend>
+                <label for="comentarios">Cómo podemos ayudarte? <br>
+                    <textarea name="comentarios" id="comentarios"  rows="10" cols="40" required placeholder="Escriba su consulta aquí..."></textarea>
+                </label>
+            </fieldset>
+            <input type="checkbox" name="terminos" id="terminos" required> Aceptar términos y condiciones
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
  
-      <footer>
+    <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Shop</h3>
