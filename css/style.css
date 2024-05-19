@@ -24,6 +24,8 @@ body{
     text-decoration: none;
     font-size: 17px;
     padding: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
 }
 
 .navbar a:hover {
@@ -32,8 +34,8 @@ body{
 }
 
 .navbar a.active {
-    background-color: #8b9b34;
-    color: white;
+    background-color: #dcb123;
+    color: rgb(0, 0, 0);
 }
 
 .navbar img {
@@ -111,30 +113,36 @@ img:nth-child(5) {
 
 /* inicio footer*/
 footer {
-    background-color: #070707;
+    display: flex;
+    background-color: #111111;
     color:aliceblue;
     align-items: center;  
+    justify-content: center;
     overflow: hidden;  
     width: calc(100% - 4px);
-    position: fixed;
-    bottom: 0;    
+    position: bottom absolute;
     margin: 2px;
     border-radius: 10px;
-    z-index: -1;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
     margin: 10px;
+    align-items: center;
+}
+
+.footer-section iframe{
+    max-height: 200px;
+    max-width: 350px;
 }
 
 .footer-section h3 {
@@ -147,7 +155,8 @@ footer {
 }
 
 .footer-section ul li {
-    margin-bottom: 5px;
+    margin-bottom: 30px;
+    padding: 5px;
 }
 /*Fin Footer*/
 
