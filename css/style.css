@@ -41,29 +41,7 @@ body{
     margin-right: 15px;
 }
 
-@media screen and (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .navbar img {
-        margin-bottom: 10px;
-        margin-left: 15px;
-    }
-
-    .navbar a {
-        padding: 10px;
-    }
-
-    .navbar-menu{
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
 /* Carrousel con 4 imágenes */
-  
 @keyframes display {
     0% {
       transform: translateX(100px);
@@ -108,18 +86,25 @@ body{
 .pic{
     height: 300px;
 }
-  
+
+img:nth-child(1) {
+    object-fit: cover;
+}
 img:nth-child(2) {
     animation-delay: 5s;
+    object-fit: cover;
 }
 img:nth-child(3) {
     animation-delay: 10s;
+    object-fit: cover;
 }
 img:nth-child(4) {
     animation-delay: 15s;
+    object-fit: cover;
 }
 img:nth-child(5) {
     animation-delay: 20s;
+    object-fit: cover;
 }
 /* fin de carrousel con 4 imágenes */
 
@@ -165,3 +150,34 @@ footer {
     margin-bottom: 5px;
 }
 /*Fin Footer*/
+
+/* comiendo responsive modo celu */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar img {
+        margin-bottom: 10px;
+        margin-left: 15px;
+    }
+
+    .navbar a {
+        padding: 10px;
+    }
+
+    .navbar-menu{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+/* fin responsive modo celu */
+
+/* comienzo responsive modo tablet */
+@media all and (min-width:600px) and (max-width:1023px) {
+    .navbar {
+        justify-content: space-evenly;
+    }
+}
+/* fin repsonsive modo tablet */
