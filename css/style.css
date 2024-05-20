@@ -42,6 +42,33 @@ body{
     height: 50px;
     margin-right: 15px;
 }
+/* Botón de menú para fonos */
+.navbar-toggle {
+    display: none;
+    background-color: #333;
+    border: none;
+    color: #f2f2f2;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Media query para pantallas fonos */
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-menu.active {
+        display: flex;
+    }
+}
 
 /* Carrousel con 4 imágenes */
 @keyframes display {
@@ -115,14 +142,16 @@ img:nth-child(5) {
 footer {
     display: flex;
     background-color: #111111;
-    color:aliceblue;
-    align-items: center;  
+    color: aliceblue;
+    align-items: center;
     justify-content: center;
-    overflow: hidden;  
-    width: calc(100% - 4px);
-    position: bottom absolute;
+    width: calc(100% - 5px);
+    position: fixed;
+    bottom: 0;
     margin: 2px;
     border-radius: 10px;
+    flex-wrap: wrap; 
+    padding: 10px; 
 }
 
 .footer-container {
@@ -138,15 +167,15 @@ footer {
     min-width: 250px;
     margin: 10px;
     align-items: center;
+    text-align: center; 
 }
 
-.footer-section iframe{
-    max-height: 200px;
-    max-width: 350px;
+.footer-section iframe {
+    max-width: 100%; 
 }
 
 .footer-section h3 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .footer-section ul {
@@ -155,12 +184,17 @@ footer {
 }
 
 .footer-section ul li {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 5px;
+}
+@media screen and (max-width: 768px) {
+    footer {
+        display: none;
+    }
 }
 /*Fin Footer*/
 
-/* comiendo responsive modo celu */
+/* comiendo responsive modo celu 
 @media screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
@@ -181,7 +215,9 @@ footer {
         flex-wrap: wrap;
     }
 }
-/* fin responsive modo celu */
+fin responsive modo celu */
+
+
 
 /* comienzo responsive modo tablet */
 @media all and (min-width:600px) and (max-width:1023px) {
@@ -190,3 +226,77 @@ footer {
     }
 }
 /* fin repsonsive modo tablet */
+
+
+
+/* formulario de contacto*/
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.info-form-contacto {
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .formulario {
+        padding: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        width: calc(100% - 20px);
+    }
+}
+/*Fin formulario de contacto*/
