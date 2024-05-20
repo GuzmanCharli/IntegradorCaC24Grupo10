@@ -112,6 +112,7 @@ body{
     border-radius: 10px;
 }
 
+
 .pic{
     height: 300px;
 }
@@ -135,30 +136,75 @@ img:nth-child(5) {
     animation-delay: 20s;
     object-fit: cover;
 }
+
+.pic-ctn2 {
+    display: flex;
+   
+    position: relative;
+    height: 100px;
+    margin: 2px;
+    border-radius: 10px;
+}
+  
+.pic-ctn2 > img {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    width: 100%;
+    left: 0%;
+    animation: display 25s infinite;
+    border-radius: 10px;
+}
+.pic2{
+    height: 100px;
+}
+img:nth-child(1) {
+    object-fit: cover;
+}
+img:nth-child(2) {
+    animation-delay: 5s;
+    object-fit: cover;
+}
+img:nth-child(3) {
+    animation-delay: 10s;
+    object-fit: cover;
+}
+img:nth-child(4) {
+    animation-delay: 15s;
+    object-fit: cover;
+}
+img:nth-child(5) {
+    animation-delay: 20s;
+    object-fit: cover;
+}
+
+
 /* fin de carrousel con 4 imágenes */
 
 
 /* inicio footer*/
 footer {
+    background-color: #070707;
     display: flex;
     background-color: #111111;
-    color: aliceblue;
-    align-items: center;
+    color:aliceblue;
+    align-items: center;  
     justify-content: center;
-    width: calc(100% - 5px);
-    position: fixed;
-    bottom: 0;
+    overflow: hidden;  
+    width: calc(100% - 4px);
+    position: relative;
+    bottom: 0;    
+    position: bottom absolute;
     margin: 2px;
     border-radius: 10px;
-    flex-wrap: wrap; 
-    padding: 10px; 
+    z-index: -1;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100%;
+    width: 75%;
 }
 
 .footer-section {
@@ -188,8 +234,14 @@ footer {
     padding: 5px;
 }
 @media screen and (max-width: 768px) {
-    footer {
-        display: none;
+    .footer-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        margin: 5px 0;
     }
 }
 /*Fin Footer*/
@@ -300,3 +352,83 @@ input[type="submit"]:hover {
     }
 }
 /*Fin formulario de contacto*/
+
+/*Imagenes-container*/
+.image-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin: 20px;
+}
+
+.image-container img {
+    max-width: 90%; /* Responsive tamaño */
+    flex: 1 1 calc(33.333% - 20px); 
+    margin: 10px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .image-container img {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container img {
+        flex: 1 1 100%; 
+    }
+}
+/*Fin Imagenes-container*/
+
+/* Contenedor Imagenes hombres/mujeres/niñox*/
+
+.image-container2 {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin: 20px;
+}
+
+.image-box {
+    flex: 1 1 calc(33.333% - 20px); 
+    margin: 10px; 
+    text-align: center; 
+}
+
+.image-box img {
+    max-width: 90%; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.image-box p {
+    margin-top: 10px;
+}
+
+.image-box a {
+    color: #000; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.image-box a:hover {
+    color: #007BFF; 
+    text-decoration: underline; 
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .image-box {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-box {
+        flex: 1 1 100%; 
+    }
+}
+/* FIN Contenedor Imagenes hombres/mujeres/niñox*/
