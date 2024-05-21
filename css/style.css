@@ -368,7 +368,7 @@ input[type="submit"]:hover {
 /*Fin formulario de contacto*/
 
 /*Imagenes-container*/
-.image-container {
+.image-container3 {
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap; 
