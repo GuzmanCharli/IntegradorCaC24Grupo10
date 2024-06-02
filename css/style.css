@@ -1,10 +1,22 @@
-* 
-body{
+* body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+.div-centrado {
+    text-align: center;
+}
+
+.div-centrado img {
+    max-width: 100%;
+    height: auto;
+}
+
 .navbar {
-    background-color: #333;
+    background-color: #0080c4;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -39,9 +51,10 @@ body{
 }
 
 .navbar img {
-    height: 50px;
+    height: 75px;
     margin-right: 15px;
 }
+
 /* Botón de menú para fonos */
 .navbar-toggle {
     display: none;
@@ -60,11 +73,11 @@ body{
         flex-direction: column;
         width: 100%;
     }
-    
+
     .navbar-toggle {
         display: block;
     }
-    
+
     .navbar-menu.active {
         display: flex;
     }
@@ -73,27 +86,31 @@ body{
 /* Carrousel con 4 imágenes */
 @keyframes display {
     0% {
-      transform: translateX(100px);
-      opacity: 0;
+        transform: translateX(100px);
+        opacity: 0;
     }
+
     10% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
+
     20% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
+
     30% {
-      transform: translateX(-100px);
-      opacity: 0;
+        transform: translateX(-100px);
+        opacity: 0;
     }
+
     100% {
-      transform: translateX(-100px);
-      opacity: 0;
+        transform: translateX(-100px);
+        opacity: 0;
     }
 }
-  
+
 .pic-ctn {
     display: flex;
     position: relative;
@@ -101,8 +118,8 @@ body{
     margin: 2px;
     border-radius: 10px;
 }
-  
-.pic-ctn > img {
+
+.pic-ctn>img {
     position: absolute;
     top: 0px;
     opacity: 0;
@@ -113,25 +130,29 @@ body{
 }
 
 
-.pic{
+.pic {
     height: 300px;
 }
 
 img:nth-child(1) {
     object-fit: cover;
 }
+
 img:nth-child(2) {
     animation-delay: 5s;
     object-fit: cover;
 }
+
 img:nth-child(3) {
     animation-delay: 10s;
     object-fit: cover;
 }
+
 img:nth-child(4) {
     animation-delay: 15s;
     object-fit: cover;
 }
+
 img:nth-child(5) {
     animation-delay: 20s;
     object-fit: cover;
@@ -139,14 +160,14 @@ img:nth-child(5) {
 
 .pic-ctn2 {
     display: flex;
-   
+
     position: relative;
     height: 100px;
     margin: 2px;
     border-radius: 10px;
 }
-  
-.pic-ctn2 > img {
+
+.pic-ctn2>img {
     position: absolute;
     top: 0px;
     opacity: 0;
@@ -155,45 +176,49 @@ img:nth-child(5) {
     animation: display 25s infinite;
     border-radius: 10px;
 }
-.pic2{
+
+.pic2 {
     height: 100px;
 }
+
 img:nth-child(1) {
     object-fit: cover;
 }
+
 img:nth-child(2) {
     animation-delay: 5s;
     object-fit: cover;
 }
+
 img:nth-child(3) {
     animation-delay: 10s;
     object-fit: cover;
 }
+
 img:nth-child(4) {
     animation-delay: 15s;
     object-fit: cover;
 }
+
 img:nth-child(5) {
     animation-delay: 20s;
     object-fit: cover;
 }
-
-
 /* fin de carrousel con 4 imágenes */
 
 
 /* inicio footer*/
 footer {
-    background-color: #070707;
+    background-color: #0080c4;
     display: flex;
-    background-color: #111111;
-    color:aliceblue;
-    align-items: center;  
+    background-color: #0080c4;
+    color: aliceblue;
+    align-items: center;
     justify-content: center;
-    overflow: hidden;  
+    overflow: hidden;
     width: calc(100% - 4px);
     position: relative;
-    bottom: 0;    
+    bottom: 0;
     position: bottom absolute;
     margin: 2px;
     border-radius: 10px;
@@ -204,7 +229,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 75%;
+    width: 90%;
 }
 
 .footer-section {
@@ -213,11 +238,11 @@ footer {
     min-width: 250px;
     margin: 10px;
     align-items: center;
-    text-align: center; 
+    text-align: center;
 }
 
 .footer-section iframe {
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .footer-section h3 {
@@ -232,16 +257,18 @@ footer {
 .footer-section ul li {
     margin-bottom: 10px;
     padding: 5px;
-    
-    
-    
 }
 
+.footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
 
-
-
-
-
+.footer .social-icons a:hover {
+    color: #ff9c00;
+}
 
 @media screen and (max-width: 768px) {
     .footer-container {
@@ -258,30 +285,6 @@ footer {
 }
 /*Fin Footer*/
 
-/* comiendo responsive modo celu 
-@media screen and (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .navbar img {
-        margin-bottom: 10px;
-        margin-left: 15px;
-    }
-
-    .navbar a {
-        padding: 10px;
-    }
-
-    .navbar-menu{
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-fin responsive modo celu */
-
-
 
 /* comienzo responsive modo tablet */
 @media all and (min-width:600px) and (max-width:1023px) {
@@ -289,140 +292,121 @@ fin responsive modo celu */
         justify-content: space-evenly;
     }
 }
+
 /* fin repsonsive modo tablet */
 
-
-
-/* formulario de contacto*/
-.formulario {
-    max-width: 600px;
-    margin: 0 auto;
+/* Formulario de Contacto*/
+.container {
+    max-width: 500px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: #dcb123;
-    border-radius: 8px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .form-group {
     margin-bottom: 20px;
-    font-weight:bold;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
-textarea,
-select {
-    width: 100%;
+input[type="tel"] {
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
 }
 
 textarea {
-    resize: vertical;
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-input[type="submit"] {
-    background-color: #1b1b1b;
-    color: white;
-    padding: 10px 20px;
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-  
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+button:hover {
+    background-color: #0056b3;
 }
 
-.info-form-contacto {
-    border: none;
-}
+/* Fin Formulario de Contacto*/
 
-@media screen and (max-width: 768px) {
-    .formulario {
-        padding: 10px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea,
-    select {
-        width: calc(100% - 20px);
-    }
-}
-/*Fin formulario de contacto*/
 
 /*Imagenes-container*/
 .image-container3 {
     display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap; 
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 20px;
 }
 
 .image-container img {
-    max-width: 90%; /* Responsive tamaño */
-    flex: 1 1 calc(33.333% - 20px); 
-    margin: 10px; 
-    border-radius: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%;
+    /* Responsive tamaño */
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .image-container img {
-        flex: 1 1 calc(50% - 20px); 
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media screen and (max-width: 480px) {
     .image-container img {
-        flex: 1 1 100%; 
+        flex: 1 1 100%;
     }
 }
+
 /*Fin Imagenes-container*/
 
 /* Contenedor Imagenes hombres/mujeres/niñox*/
 
 .image-container2 {
     display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap; 
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 20px;
 }
 
 .image-box {
-    flex: 1 1 calc(33.333% - 20px); 
-    margin: 10px;   
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
     text-align: center;
     box-shadow: 0 0 20px rgb(22, 22, 22);
-    border-radius: 15px; 
+    border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .image-box:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
     box-shadow: 0 0 30px rgb(22, 22, 22);
 }
+
 .image-box img {
     max-width: 90%;
-    margin-top: 15px;     
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -431,30 +415,30 @@ input[type="submit"]:hover {
 }
 
 .image-box a {
-    color: #000; 
-    text-decoration: none; 
-    font-weight: bold; 
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .image-box a:hover {
-    color: #007BFF; 
-    text-decoration: underline; 
+    color: #007BFF;
+    text-decoration: underline;
 }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .image-box {
-        flex: 1 1 calc(50% - 20px); 
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media screen and (max-width: 480px) {
     .image-box {
-        flex: 1 1 100%; 
+        flex: 1 1 100%;
     }
 }
-/* FIN Contenedor Imagenes hombres/mujeres/niñox*/
 
+/* FIN Contenedor Imagenes hombres/mujeres/niñox*/
 
 
 /*Productos hombre y mujer*/
@@ -463,53 +447,54 @@ input[type="submit"]:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     margin: 20px;
-  }
-  
-  .product {
+}
+
+.product {
     padding: 30px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
     box-shadow: 0 0 20px rgb(22, 22, 22);
-  }
-  
-  .product h3 {
+}
+
+.product h3 {
     color: rgb(94, 92, 91);
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 10px;
-  }
-  
-  .product p, .precio {
+}
+
+.product p,
+.precio {
     font-size: 15px;
     color: rgb(15, 15, 14);
-  }
-  
-  .precio {
-    font-weight: 800;
-  }
+}
 
-  .btn-2 {
+.precio {
+    font-weight: 800;
+}
+
+.btn-2 {
     display: inline-block;
     padding: 7px 10px;
     background-color: black;
-    color:  #dcb123;
+    color: #dcb123;
     border-radius: 5px;
     font-size: 15px;
     text-decoration: none;
-  }
+}
 
 
-  @media (max-width: 992px){
+@media (max-width: 992px) {
     .products-content {
         grid-template-columns: repeat(2, 1fr);
-      }
-  }
+    }
+}
 
-  @media (max-width: 768px){
+@media (max-width: 768px) {
     .products-content {
         grid-template-columns: 1fr;
-      }
-  }
+    }
+}
+
 /*Fin de productos hombre y mujer*/
-  
